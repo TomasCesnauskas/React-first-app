@@ -1,4 +1,5 @@
 import Button from './Button'
+import PropTypes from "prop-types";
 
 const Header = ({title}) => {
 const onClick = () => {
@@ -12,6 +13,12 @@ const onClick = () => {
             onClick={onClick} />
         </header>
     )
+}
+Header.defaultProps = {
+    title: 'Task Tracker',
+}
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
 }
 
 //CSS in JS
